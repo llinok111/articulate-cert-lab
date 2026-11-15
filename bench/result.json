@@ -1,0 +1,59 @@
+{
+  "generated": "2026-11-15T22:27:26.740Z",
+  "method": "lipschitz-interval-certificate (src/core.mjs)",
+  "baseline": "uniform frame scan (baseline/naive.mjs)",
+  "dataset": {
+    "chains": 6,
+    "linksPerChain": 12,
+    "pairsPerChain": 55,
+    "pairsTotal": 330
+  },
+  "certificate": {
+    "coldStartMs": 177.590884,
+    "warm": {
+      "samples": 7,
+      "minMs": 91.048652,
+      "medianMs": 94.985773,
+      "p95Ms": 104.987464,
+      "maxMs": 104.987464,
+      "meanMs": 95.71500657142859,
+      "stddevMs": 5.076701110625054,
+      "relStddevPct": 5.303976139662591
+    },
+    "evaluations": 30999,
+    "collidingPairs": 5,
+    "speedupVsOracle20000": 9.810989799493447,
+    "speedupVsCoarse120": 0.057613226982950384
+  },
+  "coarse120": {
+    "coldStartMs": 188.084789,
+    "warm": {
+      "samples": 7,
+      "minMs": 5.4316262,
+      "medianMs": 5.4724369,
+      "p95Ms": 5.8070078,
+      "maxMs": 5.8070078,
+      "meanMs": 5.527728549999999,
+      "stddevMs": 0.12438233994224364,
+      "relStddevPct": 2.250152821672903
+    },
+    "hitPairs": 0,
+    "missedCollisions": 5
+  },
+  "oracle20000": {
+    "samples": 20000,
+    "coldStartMs": 932.527922,
+    "warm": {
+      "samples": 5,
+      "minMs": 910.894749,
+      "medianMs": 931.90445,
+      "p95Ms": 936.868781,
+      "maxMs": 936.868781,
+      "meanMs": 928.6268594000001,
+      "stddevMs": 9.095725339726654,
+      "relStddevPct": 0.9794811820975693
+    },
+    "evaluations": 6600000
+  },
+  "note": "certificate median is over the full 6-chain / 330-pair set; the certificate reports collisions with an explicit witness (gap<=0), false positives are structurally impossible"
+}
